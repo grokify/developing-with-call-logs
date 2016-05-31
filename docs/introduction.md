@@ -21,7 +21,7 @@ Call Log data can be used as a solution for several use cases, the most common u
 * **Billing Systems** - Developers who need to provide contact-specific data for time-based billing can leverage RingCentral Call Log data to populate this information on an hourly or daily basis with greater confidence.
 * **Reconciliations** - Confirming if messages of a particular type were received or sent to a contact are made easy using the RingCentral Call Log data.
 
-## Call Log Anti-Patterns
+### Call Log Anti-Patterns
 
 It is also important to understand anti-patterns of using Call Log, these are ways developers should **not** use this resource.
 
