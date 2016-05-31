@@ -1,0 +1,1 @@
+RingCentral does not retain your [Call Log](https://developers.ringcentral.com/api-docs/latest/index.html#!#RefCallLogInfo.html) data indefinitely. This is one of the driving factors that cause developers to author integrations with RingCentral.

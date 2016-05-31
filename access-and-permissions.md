@@ -1,0 +1,1 @@
+As with every other RingCentral API resource, the [Call Log](https://developers.ringcentral.com/api-docs/latest/index.html#!#RefCallLogInfo.html) API resource has specific limitiations in place for accessing Call Log data via our API.

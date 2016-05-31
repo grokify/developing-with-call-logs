@@ -1,0 +1,1 @@
+Understanding the various actions your RingCentral users are able to execute and which are recorded in your RingCentral [Call Log](https://developers.ringcentral.com/api-docs/latest/index.html#!#RefCallLogInfo.html) data is of critical importance towards leveraging the power of the Call Log API resource.
