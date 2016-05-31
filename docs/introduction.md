@@ -4,7 +4,7 @@ The RingCentral Call Log is the source of truth for how extensions within your [
 
 ## Non-Programmatic Ways to Access Call Log Data
 
-Occassionally, while developing an application or integration, it is helpful for Developers to be able to test or invaliate data they are seeing using Call Log data. The training content contained in this document describes how Developers can use the [RingCentral API](https://developer.ringcentral.com/api-explorer) to access and view Call Log API resource data. You can use one of the following methods to access this data as well:
+Frequently, while developing an application or integration, it is helpful for Developers to be able to test or invaliate data they are seeing using Call Log data. The training content contained in this document describes how Developers can use the [RingCentral API](https://developer.ringcentral.com/api-explorer) to access and view Call Log API resource data. You can use one of the following methods to access this data as well:
 
 1. [Login to your RingCentral Online Account](http://success.ringcentral.com/articles/RC_Knowledge_Article/Logging-in-to-your-RingCentral-account) to [view Call Activity Log information](http://success.ringcentral.com/articles/RC_Knowledge_Article/Activity-Log-Overview) for your RingCentral extension or RingCentral Account.
 2. [Accessing Call Data on your RingCentral Mobile Application](http://success.ringcentral.com/articles/en_US/RC_Knowledge_Article/5122)
@@ -27,3 +27,27 @@ It is also important to understand anti-patterns of using Call Log, these are wa
 
 * **Real-time, or near-real-time reporting** - The Call Log API resource is labeled as a "Heavy" usage plan. RingCentral offers better solutions for event-driven, real-time (or near-real-time) reporting of what the various Extensions in your RingCentral account are doing at any given time: [Webhooks]() and/or [Push Notifications]() are the two recommended solutions.
 * **Long-Polling** - While this is highly related to the above anti-pattern, it is important to clearly note that long-polling Call Log (executing multiple HTTP requests to simulate real-time, socket-based data) is not a supported use case.
+
+## Major Call Log Data Types
+
+**Note** For the latest, and most up-to-date response specification, always refer to the RingCentral API Developer Guide.
+
+Currently there are four major data types which are contained within the Call Log API resource:
+
+* Active Calls
+    * Provides a list of currently active, or recently closed calls
+    * For Voice Calls ONLY
+    * Is NOT a suitable replacement for real-time account-level or extension-level data
+    * Major use case is to perform quick lookups (from PubSub or Webhook data) for a recently closed session to bootstrap data for CRM integrations
+    * Default length of time that a recently closed call is held in the list of Active Calls is 120 seconds
+* Account and Extension Level Call Log Records
+    * The **tome** of Call Log knowledge for your RingCentral Acccount
+    * Can obtain filtered call log data
+    * Detailed Call Log data provides great granularity
+* Call Recording Meta Data
+    * IS NOT the call recording itself
+    * Filterable Call Log property
+    * Very useful for call recording dashboards
+    * Provides the `contentUri` property which points to the actual recording
+* Call Recording Content
+    * Plug the contentUri into an [HTML5 Audio element]() to quickly make a recording player
