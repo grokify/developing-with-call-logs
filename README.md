@@ -1,19 +1,24 @@
-This is course content for developers interested in engineering applications and integrations using the [RingCentral Call Log API Resource](https://developers.ringcentral.com/api-docs/latest/index.html#!#RefCallLogInfo.html).
+# Developing with Call Logs
+
+This RingCentral Platform Developer course content is for [RingCentral Developers](https://developers.ringcentral.com) who need to engineer application/integration solutions implementing [RingCentral Call Log API Resources](https://developers.ringcentral.com/api-docs/latest/index.html#!#RefCallLogInfo.html).
 
 ## Course Outline
 
-### [Introduction](introduction.md)
-### [Call Log API Basics](api-basics.md)
-####  Supported HTTP Methods for Call Log API resource
-#### Making Requests to Call Log
-#### Using Active-Calls
-#### Filtering Call Log Results
-#### Understanding Detailed Call Log Records
-#### Call Recordings
-### Development Concerns
-#### Throttling Call Log Requests Properly
-#### HIPAA Considerations while Developing with Call Log
-#### Generating Call Log data in your Sandbox Account
+* [Introduction](introduction.md)
+    * [Accessing Call Log](access-and-permissions.md)
+    * [Data Retention Policy](data-retention-policy.md)
+* [Call Log API Basics](api-basics.md)
+    * Supported HTTP Methods for Call Log API resource
+    * [Understanding Call Actions](call-actions.md)
+    * Making Requests to Call Log
+    * Using Active-Calls
+    * Filtering Call Log Results
+* Understanding Detailed Call Log Records
+* Call Recordings
+* Development Concerns
+    * Throttling Call Log Requests Properly
+    * HIPAA Considerations while Developing with Call Log
+    * Generating Call Log data in your Sandbox Account
 
 ## Course Assignments
 

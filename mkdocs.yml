@@ -1,0 +1,12 @@
+site_name: Developing with Call Logs
+site_url: https://developers.ringcentral.com
+repo_url: https://github.com/ringcentral/developing-with-call-logs
+docs_dir: docs
+theme: readthedocs
+pages:
+- ['introduction.md', 'Introduction']
+- ['api-basics.md', 'Call Log API Basics']
+- ['detailed-call-logs.md', 'Using Detailed Call Log Data']
+- ['call-recordings.md', 'Call Recordings']
+- ['real-time-data.md', 'Real-Time (or near-real-time) Data']
+- ['development-concerns.md', 'Development Concerns']
