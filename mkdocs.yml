@@ -4,6 +4,7 @@ repo_url: https://github.com/ringcentral/developing-with-call-logs
 docs_dir: docs
 theme: readthedocs
 pages:
+- ['index.md', 'About', 'Developing with Call Logs']
 - ['introduction.md', 'Introduction']
 - ['api-basics.md', 'Call Log API Basics']
 - ['detailed-call-logs.md', 'Using Detailed Call Log Data']

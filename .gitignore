@@ -1,0 +1,7 @@
+*.swo
+*.swp
+*.log
+.env
+
+site
+node_modules
