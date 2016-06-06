@@ -294,3 +294,55 @@ Note: The following response data is for the exact same type of Simple Call Log 
     ]
 }
 ```
+
+## Call Recording Metadata and Call Recording Content
+
+Call Recording data is available to developers (if call recording data exists) in both the Call Log List and the Call Log Item records as a property named `recording`. The property is a JSON object with the following schema:
+
+```
+"recording": {
+    "uri": "STRING_REPRESENTING_THE_URI_TO_THE_CALL_RECORDING_METADATA_OBJECT",
+    "id": "CALL_RECORDING_ID",
+    "type": "STRING_REPRESENTING_TYPE_OF_RECORDING", // Either "OnDemand" or "Automatic"
+    "contentUri": "STRING_REPRESENTING_THE_URI_TO_THE_CALL_RECORDING_BINARY_DATA"
+}
+```
+
+To save developers time and reduce redundant API requests, the `recording` property of a Call Log (either list or item) **IS** the Call Log Metadata object, this object provides you with data **about** the recording content. Contained within the metadata is the Call Recording Content URI `contentUri`, which can be used by developers to obtain the binary data of the recording.
+
+You can access the call recording data from any of the following: Online Account Portal (for Production or Sandbox), your RingCentral SoftPhone, your RingCentral Desktop application, the RingCentral API.
+
+Call Recordings are ONLY saved by RingCentral if they are longer than 30 seconds in length. To learn how to [configure call recording with RingCentral](http://success.ringcentral.com/articles/en_US/RC_Knowledge_Article/How-to-Change-the-Automatic-Call-Recording-Settings). 
+
+### Routes
+
+**Call Recording Metadata** Used to obtain data about a Call Recording for the currently authenticated user
+
+```
+GET /restapi/v1.0/account/~/recording/REPLACE_WITH_CALL_RECORDING_ID HTTP/1.1
+Host: platform.devtest.ringcentral.com
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer REPLACE_WITH_VALID_ACCESS_TOKEN 
+```
+
+**Call Recording Content** Used to obtain binary data that IS the Call Recording for the currently authenticated user
+
+```
+GET /restapi/v1.0/account/~/recording/REPLACE_WITH_CALL_RECORDING_ID/content HTTP/1.1
+Host: platform.devtest.ringcentral.com
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer REPLACE_WITH_VALID_ACCESS_TOKEN 
+```
+
+### Response (meta data), the response for Call Recording Content is being omitted since it is just binary data
+
+```
+{
+    "id": "RECORDING_ID",
+    "contentUri": "https://media.devtest.ringcentral.com:443/restapi/v1.0/account/ACCOUNT_ID/recording/RECORDING_ID/content",
+    "contentType": "audio/mpeg", // Configurable in your Online Account Portal, but this is default
+    "duration": 46 // Value is in seconds
+}
+```
