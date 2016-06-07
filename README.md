@@ -4,15 +4,16 @@ This RingCentral Platform Developer course content is for [RingCentral Developer
 
 ## Course Outline
 
-* [Introduction](introduction.md)
-* [Call Log API Basics](api-basics.md)
-* [Understanding Detailed Call Log Records](detailed-call-logs.md)
-* [Call Recordings](call-recordings.md)
-* [Event-Driven Call Log Data](event-driven-call-log-data.md)
-* [Development Concerns](development-concerns.md)
+* [Introduction](docs/introduction.md)
+* [Call Log API Basics](docs/api-basics.md)
+* [Understanding Detailed Call Log Records](docs/detailed-call-logs.md)
+* [Call Recordings](docs/call-recordings.md)
+* [Event-Driven Call Log Data](docs/event-driven-call-log-data.md)
+* [Development Concerns](docs/development-concerns.md)
 
 ## Course Assignments
 
+0. Accessing Call Log
 1. Call Log API Basics
 2. Active Calls
 3. Call Recordings
