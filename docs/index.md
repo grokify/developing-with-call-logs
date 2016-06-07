@@ -13,9 +13,9 @@ This RingCentral Platform Developer course content is for [RingCentral Developer
     * Making Requests to Call Log
     * Using Active-Calls
     * Filtering Call Log Results
-* Understanding Detailed Call Log Records
-* Call Recordings
-* Development Concerns
+* Understanding Detailed Call Log Records (detailed-call-logs.md)
+* Call Recordings (call-recordings.md)
+* Development Concerns (development-concerns.md)
     * Throttling Call Log Requests Properly
     * HIPAA Considerations while Developing with Call Log
     * Generating Call Log data in your Sandbox Account
@@ -24,8 +24,8 @@ This RingCentral Platform Developer course content is for [RingCentral Developer
 
 1. Call Log API Basics
 2. Active Calls
-3. Call Recordings
-4. Detailed Call Logs
+3. Call Recordings (call-recordings.md)
+4. Detailed Call Logs (detailed-call-log-tutorial.md)
 5. Filtering Call Log response data
 6. Call Log Batch Requests
 7. Exporting Account-Level Call Log Data

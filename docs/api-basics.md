@@ -26,7 +26,7 @@ Currently there are four major data types which are contained within the Call Lo
 
 All of Call Log data types have two levels of access, Admin (aka: Account) and User (aka: Extension). Account level access, is achieved by authenticating (obtaining an access_token) using RingCentral Admin user credentials. Account level response data will include records across an account, as compared to User/Extension level response data which is scoped ONLY to the **currently authenticated user**.
 
-## Active Calls
+# Active Calls
 
 Active Calls provides developers with time-sensitive insights into what is (or has recently) occurred in your RingCentral Account. We can perform this lookup at the Account Level or at the Extension Level depending upon the role of the user who has authenticated and obtained an access_token.
 
@@ -38,7 +38,7 @@ Developers should consider Active Calls to be a time-sensitive cache, where the 
 
 Query parameters are dropped if supplied and only `Simple` views of Call Log data are available using Active Call requests.
 
-### Routes
+**Routes**
 
 **Note: All requests below are referencing the Sandbox API Base URI (https://platform.devtest.ringcentral.com) as compared to the Production API Base URI (https://platform.ringcentral.com)**
 
@@ -81,7 +81,7 @@ Authorization: Bearer REPLACE_WITH_YOUR_USER_LEVEL_ACCESS_TOKEN
 Cache-Control: no-cache
 ```
 
-### Response Format
+**Response Format**
 
 Each record in the response JSON will be the same for either Account-Level or Extension-Level Active Call Records.
 
@@ -112,7 +112,7 @@ Each record in the response JSON will be the same for either Account-Level or Ex
 }
 ```
 
-## Call Logs
+# Call Logs
 
 Developers should consider Call Logs to be the database of authority as it relates to actions (both inbound and outbound) for a RingCentral Account. The data contained can be queried in a variety of ways using filters as well as exposing deeper granualarity for all legs of a call (such as the case with a RingOut or forwarded calls).
 
@@ -120,7 +120,7 @@ The session_id value should be used if you want to associate multiple Call Logs 
 
 Call logs can be searched across an entire account by authenticating (obtaining an access_token) using Admin level credentials.
 
-### Routes
+**Routes**
 
 **Account Level Call Log List** are the Call Logs for an entire account. Requires an Admin account to authenticate and obtain the access_token used for this request.
 
@@ -152,7 +152,7 @@ Accept: application/json
 Authorization: Bearer REPLACE_WITH_YOUR_ACCESS_TOKEN
 ```
 
-### Filters
+**Filters**
 
 Filters (query parameters) improve the value of Call Log data for developers. For a current list of the filter values available, please refer to the [API Developer Guide](https://developers.ringcentral.com/api-docs/latest/index.html#!#RefGetExtensionCallLog). 
 
@@ -173,7 +173,7 @@ Some key things to note about dateTo and dateFrom:
 
 Example: July 13, 2016 at midnight in San Francisco, CA, USA === 2016-08-13T00:00:00.0800Z
 
-### Response Format
+**Response Format**
 
 There are two response formats you can receive which are indicated by the `view` query parameter. By default, the `view` is **Simple**, but you can set the value of this parameter to **Detailed** to obtain greater granularity into the legs of a call.
 
@@ -295,7 +295,7 @@ Note: The following response data is for the exact same type of Simple Call Log 
 }
 ```
 
-## Call Recording Metadata and Call Recording Content
+# Call Recording Metadata and Call Recording Content
 
 Call Recording data is available to developers (if call recording data exists) in both the Call Log List and the Call Log Item records as a property named `recording`. The property is a JSON object with the following schema:
 
@@ -314,7 +314,7 @@ You can access the call recording data from any of the following: Online Account
 
 Call Recordings are ONLY saved by RingCentral if they are longer than 30 seconds in length. To learn how to [configure call recording with RingCentral](http://success.ringcentral.com/articles/en_US/RC_Knowledge_Article/How-to-Change-the-Automatic-Call-Recording-Settings). 
 
-### Routes
+**Routes**
 
 **Call Recording Metadata** Used to obtain data about a Call Recording for the currently authenticated user
 
@@ -336,7 +336,7 @@ Accept: application/json
 Authorization: Bearer REPLACE_WITH_VALID_ACCESS_TOKEN 
 ```
 
-### Response (meta data), the response for Call Recording Content is being omitted since it is just binary data
+**Response (meta data), the response for Call Recording Content is being omitted since it is just binary data**
 
 ```
 {
