@@ -9,5 +9,6 @@ pages:
 - ['api-basics.md', 'Call Log API Basics']
 - ['detailed-call-logs.md', 'Using Detailed Call Log Data']
 - ['call-recordings.md', 'Call Recordings']
-- ['real-time-data.md', 'Real-Time (or near-real-time) Data']
+- ['event-driven-call-log-data.md', 'Event-Driven Call Log Data']
 - ['development-concerns.md', 'Development Concerns']
+- ['assignments.md', 'Assignments']

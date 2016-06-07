@@ -16,7 +16,7 @@ What actually happened during the call:
 
 This is not normal (and the call actually failed), but it provides an example.
 
-To better understanding this, complete the [RingOut Detailed Call Leg Tutorial](detailed-call-log-tutorial.md).
+To better understanding this, complete the [Assignments](assignments.md) - **Detailed Call Logs**.
 
 ```
 {

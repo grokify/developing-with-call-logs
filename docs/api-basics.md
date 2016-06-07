@@ -1,4 +1,4 @@
-Before completing this section of the course content, please make sure you have read the [Introduction](introduction.md), [Accessing Call Logs](access-and-permissions.md), [Data Retention Policy](data-retention-policy.md), and [Call Actions](call-actions.md).
+Before completing this section of the course content, please make sure you have read the [Introduction](introduction.md).
 
 The RingCentral Call Log API resource is the **tome** of knowledge about inbound and outbound actions for all users of your RingCentral account. Call Log data is segmented into four (4) data types:
 
@@ -32,7 +32,7 @@ Active Calls provides developers with time-sensitive insights into what is (or h
 
 Active Calls are not `real time`. There is some latency between the time when a call has terminated and when it shows up in the records returned, this latency differs but it is typically 3-10 seconds.
 
-Active Calls are created to work as a tool for integration developers who need to lookup call log data to append notes, and sentiment for things such as CRM integrations. Active Calls are a handy tool for looking up this time-sensitive information, but this can also be confusing for developers expecting this Call Log data type to represent `real time` active calls. For `real-time` or `near real-time` call data developers will want to either use [Webhooks](/webhooks.md) or [Push Notification](/push-notification.md).
+Active Calls are created to work as a tool for integration developers who need to lookup call log data to append notes, and sentiment for things such as CRM integrations. Active Calls are a handy tool for looking up this time-sensitive information, but this can also be confusing for developers expecting this Call Log data type to represent `real time` active calls. For `real-time` or `near real-time` call data developers will want to either use [Webhooks](event-driven-call-log-data.md) or [Push Notification](event-driven-call-log-data.md).
 
 Developers should consider Active Calls to be a time-sensitive cache, where the default period of time a call remains in this cache (after being ended) is approximately 120 seconds.
 

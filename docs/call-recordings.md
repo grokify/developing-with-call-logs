@@ -2,7 +2,7 @@
 
 Developers who wish to either download/backup or create an interface for users to listen to call recordings may do so using the Call Recording Metadata and Call Recording actions of the Call Log API resource.
 
-If you do not already have a call recording created in your Sandbox account, you can either do this manually, or you can follow through the [Generating Call Recordings](generating-call-recordings.md) tutorial.
+If you do not already have a call recording created in your Sandbox account, you can either do this manually, or you can complete the [Assignment](assignments.md) **Generating Call Recordings**.
 
 To manually create a call recording, you can use: your RingCentral Soft Phone (either directly, or by using RingOut: tutorial: TODO), RingCentral WebRTC (tutorial: TODO).
 
